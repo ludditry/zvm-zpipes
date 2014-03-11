@@ -23,7 +23,7 @@ zvm_pipe_open(const char *descriptor)
 
     pinfo->broker = strdup(descriptor);
     if(pinfo->broker) {
-        char *del = strchr(pinfo->broker, ':');
+        char *del = strchr(pinfo->broker, '|');
         if(del) {
             *del = 0;
             pinfo->pipe = del + 1;

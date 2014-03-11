@@ -45,4 +45,4 @@ AC_SUBST(ZPIPES_LIBS)
 AC_CHECK_FUNCS([strcasecmp strspn strstr])
 
 # Write config.status and the Makefile
-AC_OUTPUT([Makefile src/Makefile])
+AC_OUTPUT([Makefile src/Makefile src/libzvm_zpipes.pc])
