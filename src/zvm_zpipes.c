@@ -40,17 +40,14 @@ zvm_pipe_open(const char *descriptor)
 }
 
 int
-zvm_pipe_close(ZVMPIPE* pipe)
+zvm_pipe_close(ZVMPIPE pipe)
 {
-    pipe_info_t *pp =  *pipe;
+    zpipes_client_destroy(&pipe->pclient);
+    if(pipe->broker)
+        free(pipe->broker);
 
-    zpipes_client_destroy(&pp->pclient);
-    if(pp->broker)
-        free(pp->broker);
+    free(pipe);
 
-    free(pp);
-
-    pipe = NULL;
     return 0;
 }
 
