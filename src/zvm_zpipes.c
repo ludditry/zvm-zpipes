@@ -13,13 +13,13 @@ typedef struct pipe_info_t {
 } pipe_info_t;
 
 
-__attribute__((constructor)) void init(void);
+/* __attribute__((constructor)) void init(void); */
 
-void
-init(void)
-{
-    zsys_handler_set(NULL);
-}
+/* void */
+/* init(void) */
+/* { */
+/*     zsys_handler_set(NULL); */
+/* } */
 
 ZVMPIPE 
 zvm_pipe_open(const char *descriptor)
