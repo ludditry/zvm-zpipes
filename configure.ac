@@ -28,12 +28,10 @@ DEBUG_CFLAGS="-O2 -DNDEBUG"
 LTVER="0:0:0"
 
 # Checks for libraries.
-PKG_CHECK_MODULES([ZPIPES], libzpipesclient)
-PKG_CHECK_MODULES([ZBROKER], libzbroker)
-PKG_CHECK_MODULES([CZMQ], libczmq)
+PKG_CHECK_MODULES([ZPIPES], libzbroker_cli)
 
 # Set CFLAGS
-CFLAGS="${DEBUG_CFLAGS} ${ORIG_CFLAGS} ${ZPIPES_CFLAGS} ${CZMQ_FLAGS} ${ZBROKER_FLAGS}"
+CFLAGS="${DEBUG_CFLAGS} ${ORIG_CFLAGS} ${ZPIPES_CFLAGS}"
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST
@@ -41,8 +39,6 @@ AC_C_CONST
 AC_SUBST(PACKAGE_VERSION)
 AC_SUBST(LTVER)
 AC_SUBST(ZPIPES_LIBS)
-AC_SUBST(ZBROKER_LIBS)
-AC_SUBST(CZMQ_LIBS)
 
 # Checks for library functions.
 AC_CHECK_FUNCS([strcasecmp strspn strstr])

@@ -6,6 +6,6 @@ includedir=@includedir@
 Name: libzvm_zpipes
 Description: zerovm pipe broker client for zpipes
 Version: @VERSION@
-Requires: libzpipesclient libczmq libzbroker
-Libs: -L${libdir} -lzvm_zpipes -lzpipesclient -lzbroker -lczmq
+Requires: libzbroker_cli
+Libs: -L${libdir} -lzbroker_cli
 Cflags: -I${includedir}
