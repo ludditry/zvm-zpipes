@@ -7,5 +7,5 @@ Name: libzvm_zpipes
 Description: zerovm pipe broker client for zpipes
 Version: @VERSION@
 Requires: libzbroker_cli
-Libs: -L${libdir} -lzbroker_cli
+Libs: -L${libdir} -lzmv_zpipes -lzbroker_cli
 Cflags: -I${includedir}
