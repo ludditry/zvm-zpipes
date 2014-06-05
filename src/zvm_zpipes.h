@@ -5,6 +5,8 @@
 #ifndef __ZVM_ZPIPES_H__
 #define __ZVM_ZPIPES_H__
 
+#include <unistd.h>        // ssize_t
+
 struct pipe_info_t;
 typedef struct pipe_info_t* ZVMPIPE;
 
